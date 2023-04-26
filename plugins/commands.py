@@ -17,7 +17,7 @@ import json
 import base64
 logger = logging.getLogger(__name__)
 
-DELETE_TIME = int(environ.get('DELETE_TIME', 280)) #600 mean 10minit 😎🍕
+DELETE_TIME = int(environ.get('DELETE_TIME', 300)) #600 mean 10minit 😎🍕
 BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming)
@@ -25,9 +25,9 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
             InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", callback_data="search"),
-            InlineKeyboardButton('📢 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 📢', url=f'https://t.me/tamil4katmos')
+            InlineKeyboardButton('📢 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 📢', url=f'https://t.me/Ck_cinema_city')
             ],[
-            InlineKeyboardButton('😇 movie search group 😇', url='https://t.me/+BTloleyZM1IxMzhl')
+            InlineKeyboardButton('😇 movie search group 😇', url='https://t.me/+d-1MBx1N_oVmY2Nl')
             ]]
         await message.reply(START_MESSAGE.format(user=message.from_user.mention if message.from_user else message.chat.title, bot=temp.B_LINK), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)                    
         await asyncio.sleep(2) 
@@ -43,12 +43,11 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton("➕️ ADD ME TO YOUR GROUP ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("📢 GROUP 1 📢", url="https://t.me/+BTloleyZM1IxMzhl"),
-            InlineKeyboardButton("📢 GROUP 2 📢", url="https://t.me/+4PZWTzj7K3EyZTc1")
+            InlineKeyboardButton("📢 GROUP 📢", url="https://t.me/+d-1MBx1N_oVmY2Nl")
             ],[
             InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", callback_data="search")
             ],[
-            InlineKeyboardButton("📢 SUPPORT 📢", url="https://t.me/tamil4ksupport"),
+            InlineKeyboardButton("📢 SUPPORT 📢", url="https://t.me/+Gebgd4o7jEk4ZDE1"),
             InlineKeyboardButton("💫 ABOUT 💫", callback_data="about")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -95,12 +94,11 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton("➕️ ADD ME TO YOUR GROUP ➕️", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("📢 GROUP 1 📢", url="https://t.me/+BTloleyZM1IxMzhl"),
-            InlineKeyboardButton("📢 GROUP 2 📢", url="https://t.me/+4PZWTzj7K3EyZTc1")
+            InlineKeyboardButton("📢 GROUP 📢", url="https://t.me/+d-1MBx1N_oVmY2Nl")
             ],[
             InlineKeyboardButton("🔍 𝚂𝙴𝙰𝚁𝙲𝙷 🔍", callback_data="search")
             ],[
-            InlineKeyboardButton("📢 SUPPORT 📢", url="https://t.me/tamil4ksupport"),
+            InlineKeyboardButton("📢 SUPPORT 📢", url="https://t.me/+Gebgd4o7jEk4ZDE1"),
             InlineKeyboardButton("💫 ABOUT 💫", callback_data="about")
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -257,7 +255,7 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         )
-    await message.reply_text(f'‼️ File will auto delete in 5 minutes😱\n💡Forward it to saved massages or anywhere before downloading.😁\n😇Join @tamil4katmos')
+    await message.reply_text(f'‼️ File will auto delete in 5 minutes😱\n💡Forward it to saved massages or anywhere before downloading.😁\n😇Join @Ck_cinema_city')
     await asyncio.sleep(DELETE_TIME) #kya karu o lady's ooo kya karu o lady's me to aadat se majbur 😉
     await mxa.delete()
                     
